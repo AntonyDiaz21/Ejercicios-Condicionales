@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maxima temperatura permitida en ascensor</title>
+</head>
+<body>
+    <script>
+        /*Escribe un programa que simule el funcionamiento de un ascensor. El usuario ingresa el piso al
+        que desea ir, y el programa verifica si es un piso válido (usar un rango de numero). Si es
+        válido, el ascensor se mueve al piso deseado. Si no es válido, muestra un mensaje de error.*/
+
+        console.log("Bienvenido Usuario")
+
+        var temperatura;
+
+        temperatura = parseFloat(prompt("Digite la temperatura actual"))
+        if (temperatura >= 18 && temperatura <= 25) {
+            console.log("La temperatura registrada es adecuada: " + temperatura)
+            alert("La temperatura registrada es adecuada: " + temperatura)
+        } else {
+            console.log("La temperatura registrada no es válida")
+            alert("La temperatura registrada no es válida")
+        }
+    </script>
+</body>
+</html>

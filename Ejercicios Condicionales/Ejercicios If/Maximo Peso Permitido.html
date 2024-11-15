@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximo peso permitido en Ascensor</title>
+</head>
+<body>
+    <script>
+        /*Desarrolla un programa que simule un ascensor que tiene un límite de peso. El usuario ingresa
+        su peso y el piso al que desea ir. El programa debe verificar si el peso está dentro del límite
+        permitido. Si es así, el ascensor se mueve al piso deseado. Si no, muestra un mensaje de que
+        el ascensor está sobrecargado*/
+
+        console.log("Bienvenido Usuario");
+        var peso;
+
+        peso = parseInt(prompt("¿Cuál es el peso ingresado en el ascensor?"));
+        if (isNaN(peso) || peso > 320 || peso <= 0){
+            console.log("El peso ingresado es invalido. El ascensor no puede funcionar.");
+            alert("El peso ingresado es invalido. El ascensor no puede funcionar.")
+        }else{
+            console.log("El peso ingresado es válido");
+            alert("El peso ingresado es válido");
+            var piso = parseInt(prompt("Digite el piso al que desee ir (1-10)"))
+            if (piso >= 1 && piso <= 10) {
+                console.log("El ascensor se mueve al piso " + piso)
+                alert("El ascensor se mueve al piso " + piso)
+            } else {
+                console.log("El piso ingresado no es válido")
+                alert("El piso ingresado no es válido")
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calificacion</title>
+</head>
+<body>
+    <script>
+        /*Pide al usuario que ingrese una calificación numérica del 0 al 100. Para mostrar un 
+        mensaje dependiendo del rango de calificación (A, B, C, D, F)*/
+
+        console.log("Bienvenido Usuario")
+
+        var calificacion = parseFloat(prompt("Ingrese la calificación del estudiante"));
+
+        while(isNaN(calificacion) || calificacion < 0 || calificacion > 100){
+            console.log("Calificación ingresada invalida");
+            alert("Calificación ingresada invalida");
+            calificacion = parseFloat(prompt("Ingrese la calificación del estudiante"));
+        }
+        var resultado;
+        switch (true) {
+            case (calificacion >= 90):
+            resultado = "A";
+                break;
+            case (calificacion >= 80):
+            resultado = "B";
+                break;
+            case (calificacion >= 70):
+            resultado = "C";
+                break;
+            case (calificacion >= 60):
+            resultado = "D";
+                break;
+            default:
+            resultado = "F";
+        }
+
+        console.log("La calificación del estudiante es "+ resultado);
+        alert("La calificación del estudiante es "+ resultado);
+    </script>
+</body>
+</html>

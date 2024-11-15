@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categoria de edad</title>
+</head>
+<body>
+    <script>
+        /*Categorías de edad: Solicita al usuario que ingrese su edad. para determinar en qué 
+        categoría de edad se encuentra (niño, adolescente, adulto, adulto mayor) y muestra un 
+        mensaje acorde*/
+
+        console.log("Bienvenido Usuario")
+
+        var edad = parseInt(prompt("Ingrese la edad del usuario"));
+
+        while(isNaN(edad) || edad < 0){
+            console.log("La edad ingresada es invalida");
+            alert("La edad ingresada es invalida");
+            edad = parseInt(prompt("Ingrese la edad del usuario"));
+        }
+
+        var categoria;
+
+        if (edad >= 0 && edad <= 12) {
+            categoria = "niño";
+        } else if (edad >= 13 && edad <= 17) {
+            categoria = "adolescente";
+        } else if (edad >= 18 && edad <= 59) {
+            categoria = "adulto";
+        } else if (edad >= 60 && edad <=120){
+            categoria = "adulto mayor";
+        }else{
+            categoria = "fuera de rango";
+        }
+
+        switch (categoria) {
+            case "niño":
+                console.log("El usuario es un niño");
+                alert("El usuario es un niño");
+                break;
+            case "adolescente":
+                console.log("El usuario es un adolescente");
+                alert("El usuario es un adolescente");
+                break;
+            case "adulto":
+                console.log("El usuario es un adulto");
+                alert("El usuario es un adulto");
+                break;
+            case "adulto mayor":
+                console.log("El usuario es un adulto mayor");
+                alert("El usuario es un adulto mayor");
+                break;
+            case "fuera de rango":
+                console.log("La edad ingresada esta fuera de rango!!");
+                alert("La edad ingresada esta fuera de rango!!");
+                break;
+            default:
+                console.log("Categoría no válida");
+                alert("Categoría no válida");
+                break;
+        }
+    </script>
+</body>
+</html>
