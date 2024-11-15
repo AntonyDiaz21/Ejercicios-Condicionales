@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados Examen</title>
+</head>
+<body>
+    <script>
+        /*Desarrolla un programa que permita al usuario ingresar sus resultados de exámenes. El
+        programa debe calcular el promedio de los resultados y determinar si el estudiante ha aprobado
+        o reprobado. Utiliza un bucle para solicitar los resultados hasta que el usuario decida no ingresar
+        más resultados.*/
+        
+        console.log("Bienvenido Usuario");
+
+        var nota;
+        var suma = 0;
+        var contador = 0;
+        var continuar = true;
+
+        do{
+            nota = parseFloat(prompt("Por favor Ingrese la nota de su examen"));
+            while (isNaN(nota) || nota < 0 || nota > 100) {
+                alert("Ingrese un valor valido del 0 al 100!");
+                nota = parseFloat(prompt("Por favor Ingrese la nota de su examen"));
+            }
+            suma += nota;
+            contador++;
+            continuar = confirm("¿Desea Ingresar más resultados?");
+        }while (continuar)
+
+        if (contador > 0) {
+            var promedio = suma / contador;
+
+        if (promedio >=70) {
+            alert("¡Has aprobado! Tu promedio es: "+ promedio.toFixed(2));
+            console.log("¡Has aprobado! Tu promedio es: "+ promedio.toFixed(2));
+        }else{
+            alert("Has reprobado :(. Tu promedio es: "+ promedio.toFixed(2));
+            console.log("Has reprobado :(. Tu promedio es: "+ promedio.toFixed(2));
+        }
+        } else {
+            alert("No ha ingresado resultados.");
+            console.log("No ha ingresado resultados.");
+        }
+    </script>
+</body>
+</html>

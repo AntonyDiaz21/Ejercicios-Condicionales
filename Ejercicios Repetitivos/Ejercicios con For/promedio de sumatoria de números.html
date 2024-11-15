@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promedio de Sumatoria de Números</title>
+</head>
+<body>
+    <script>
+        /*Calcular la sumatoria y el promedio de un rango de números indicados por el usuario e
+        imprimir los resultados en consola.*/
+        console.log("Bienvenido usuario")
+        var inicio = parseInt(prompt("Ingrese el número inicial del rango:"));
+        var fin = parseInt(prompt("Ingrese el número final"));
+        while (isNaN(inicio) || isNaN(fin) || inicio > fin) {
+            console.log("Por favor, ingresa un rango válido.");
+            alert("(Por favor, ingresa un rango válido)")
+            inicio = parseInt(prompt("Ingrese el número inicial del rango:"));
+            fin = parseInt(prompt("Ingrese el número final"));
+        }
+        var sumatoria = 0;
+        var contador = 0;
+        for (var i = inicio; i <= fin; i++) {
+            console.log(i); // Imprimir los números en consola para ver el proceso de cálculo.
+            sumatoria += i;
+            contador++;
+        }
+        promedio = sumatoria / contador;
+        console.log("La sumatoria de los números del ", inicio, " al ", fin, " es: ", sumatoria);
+        console.log("El promedio de los números del ", inicio, " al ", fin, " es: ", promedio);
+    </script>
+</body>
+</html>

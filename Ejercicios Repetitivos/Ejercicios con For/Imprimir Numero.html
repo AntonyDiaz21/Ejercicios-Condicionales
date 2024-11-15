@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For a partir de número pedido</title>
+</head>
+<body>
+    <script>
+        /*- Pedir un numero e imprimir los números del cero al solicitado imprimir en la consola.*/
+        console.log("Bienvenido usuario")
+        var numero = parseInt(prompt("Ingrese un número"));
+        while (numero <=0){
+            alert(("El número debe ser positivo y mayor a cero"))
+            numero = parseInt(prompt("Ingrese un número"));
+        }
+        for (var i = 0; i <= numero; i++) {
+            console.log(i);
+        }
+    </script>
+</body>
+</html>

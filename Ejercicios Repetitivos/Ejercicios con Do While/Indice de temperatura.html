@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indice de temperatura</title>
+</head>
+<body>
+    <script>
+        /*Escribe un programa que simule un sensor de temperatura. El usuario ingresa la temperatura actual, y el 
+        programa verifica si está dentro de un rango aceptable (por ejemplo, entre 18°C y 25°C). Si no 
+        está dentro del rango, muestra una alerta y continúa solicitando la temperatura hasta que esté dentro del rango.*/
+        
+        console.log("Bienvenido Usuario");
+
+        var temperatura;
+
+        do{
+            temperatura = parseFloat(prompt("La temperatura actual °C"));
+            if (temperatura <18 || temperatura > 25) {
+                alert("¡¡Peligro: Temperatura fuera del rango aceptable.");
+            }
+        }while (temperatura <18 || temperatura > 25)
+        alert("Temepratura aceptable: "+temperatura +" °C");
+
+        console.log("Temepratura aceptable: "+temperatura+" °C");
+    </script>
+</body>
+</html>

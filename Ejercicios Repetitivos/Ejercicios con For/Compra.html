@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de productos</title>
+</head>
+<body>
+    <script>
+        /*Crea un programa que simule el proceso de ventas en una tienda. Utiliza un bucle para registrar 
+        las ventas de varios productos. Debes solicitar el nombre del producto, su precio y la cantidad vendida. 
+        Al finalizar, muestra el total de ventas y los productos vendidos.*/
+        console.log("Bienvenido usuario a la Tienda Doña Margarita")
+        var Respuesta = confirm("¿Desea Realizar una compra?");
+        if (Respuesta){
+            var cantidadCompra= parseInt(prompt("¿Cuántos productos desea Comprar?"))
+            while (isNaN(cantidadCompra) || cantidadCompra <= 0) {
+                alert("Por favor, ingrese valores válidos.");
+            };
+            var totalVentas = 0;
+            var productos = ""
+            for (var i =0; i<cantidadCompra; i++) {
+                var nombreProducto = prompt("Ingrese el nombre del producto:");
+                var precioProducto = parseFloat(prompt("Ingrese el precio del producto:"));
+                var cantidadVendida = parseInt(prompt("Ingrese la cantidad vendida del producto:"))
+                while (isNaN(precioProducto) || isNaN(cantidadVendida) || precioProducto <= 0 || cantidadVendida <= 0) {
+                    alert("Por favor, ingrese valores válidos.");
+                    var precioProducto = parseFloat(prompt("(Por favor, ingrese valores válidos).\nIngrese el precio del producto:"));
+                    var cantidadVendida = parseInt(prompt("Ingrese la cantidad vendida del producto:"))
+
+                }
+                productos += nombreProducto+ ", ";
+                var totalProducto = precioProducto * cantidadVendida;
+                totalVentas += totalProducto;
+            };
+                console.log("Productos Vendidos: " + productos);
+                console.log("Total de la Compra: $" + totalVentas);
+                console.log("Gracias por su compra. Hasta pronto!")
+        }else{
+            console.log("Gracias por su visita");
+        }
+    </script>
+</body>
+</html>
